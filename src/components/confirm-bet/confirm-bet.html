@@ -1,0 +1,22 @@
+<!-- Generated template for the ConfirmBetComponent component {{selectedBet.overUnder}} {{selectedBet.betType}} {{selectedBet.amount}}  -->
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h1>Is this your bet?</h1>
+          </ion-col>
+        </ion-row>
+        <ion-row class="footballMatch" align-items-center>
+          <ion-col col-5><img src="{{getImage(home)}}"><p>{{home}}</p></ion-col>
+          <ion-col col-2><h3>VS</h3></ion-col>
+          <ion-col col-5><img src="{{getImage(visitor)}}"><p>{{visitor}}</p></ion-col>
+        </ion-row>
+    </ion-grid><br>
+    <h4><b>Bet Type: </b>{{betType}}</h4><br>
+    <h4><b>Over/Under: </b>{{overUnder}}</h4><br>
+    <h4><b>Amount: </b>{{amount}}€</h4><br>
+</ion-content>
+
+<ion-footer>
+    <button ion-button (click)="ok()">Ok</button><button ion-button (click)="cancel()">Cancel</button>
+</ion-footer>
